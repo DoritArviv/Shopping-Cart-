@@ -1,0 +1,33 @@
+<div class="container mt-3">
+    <h2> Hello {{user?.username}}</h2>
+    <hr>
+    <h4>Here is your shopping cart</h4>
+    <br>
+    <div class="row cart-row">
+        <div *ngFor="let product of products; index as i" class="product">
+            <div class="row">
+                <div class="col-3">
+                    <img class="card-img-top img-fluid" src="{{ product.imagePath }}" alt="Card image">
+                </div>
+                <div class="col-3">
+                    <p class="card-text"><u>Description:</u> {{product.description |slice : 0 : 100}} ...</p>
+                </div>
+                <div class="col-2">
+                    <h6 class="card-text">Item :{{product.title}}</h6>
+                </div>
+                <div class="col-2">
+                    <p><u>Price:</u> {{product.price | currency}}</p>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-outline-danger" (click)="onDelete(product._id)">DELETE</button>
+                </div>
+
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <div class="price text-right">
+        <p class="d-inline">Total Price : {{totalPrice|currency}} </p>
+        <button class="btn  btn-outline-primary btn-sm d-inline">PAY</button>
+    </div>
+</div>

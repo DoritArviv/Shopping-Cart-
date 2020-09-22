@@ -1,0 +1,28 @@
+
+<div class="container register">
+    <h2 class="text-center">Welcome</h2>
+    <h5 class="text-center">Fill In Your Details</h5>
+  
+    <hr class="w-40">
+    <form class="register__form w-25" [formGroup]="frmRegister" (ngSubmit)="onRegister()">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input formControlName="username" type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input formControlName="email" type="text" class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input formControlName="password" type="password" class="form-control">
+      </div>
+
+      <div class="button-group">
+  
+        <button class="btn btn-outline-danger" (click)="onCancel()">CANCEL</button>
+        <button class="btn btn-success ml-2">REGISTER</button>
+      </div>
+    </form>
+  </div>

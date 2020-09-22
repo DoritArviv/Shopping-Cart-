@@ -1,0 +1,19 @@
+<div class="container w-200">
+    <div class="row">
+        <div *ngFor="let product of products">
+            <div class="card mr-3 mt-5" style="width: 21rem;">
+                <div class="card-body">
+                    <img class="card-img-top img-fluid" src="{{ product.imagePath }}" alt="Card image">
+                    &nbsp;
+                    <h6 class="card-text">Item :{{product.title}}</h6>
+                    <hr>
+                    <p class="card-text"><u>Description:</u> {{product.description}}</p>
+                    <p><u>Price:</u> {{product.price | currency}}</p>
+
+                    <button class="btn btn-primary" (click)="addToCart(product._id)">Add</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+.card {
+    align-self: center;
+    height: 45em;
+}
+img{
+    height: 320px;
+}
